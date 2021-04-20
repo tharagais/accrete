@@ -1,0 +1,1218 @@
+{
+  "accounts": [
+    { "name": "john", "pet": "cat" },
+    { "name": "bob", "pet": "dog" },
+    { "name": "moe", "pet": "mosquito" }
+  ],
+  "stages": [
+    {
+      "title": "Discover",
+      "desc": "cat",
+      "items": [
+        {
+          "id": 1,
+          "title": "Domains Preference",
+          "icon": "lni-domain",
+          "status": false,
+          "hours": 0,
+          "cost": 0,
+          "list": [
+            {
+              "id": 101,
+              "title": "Already Website Available",
+              "message": "like www.example.com",
+              "type": "toggle",
+              "value": false,
+              "hours": 0
+            },
+            {
+              "id": 101,
+              "title": "Need to Buy New Domains",
+              "type": "toggle",
+              "value": false,
+              "hours": 0,
+              "list": [
+                {
+                  "id": 102,
+                  "depends": 101,
+                  "title": "Number of New Domains Required",
+                  "message": ".com domain as assumption",
+                  "type": "slider",
+                  "range": {
+                    "start": 1,
+                    "end": 10,
+                    "stage": 1
+                  },
+                  "value": 1,
+                  "hours": 3,
+                  "cost": 10
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Hosting Preference",
+          "icon": "lni-cloud",
+          "hours": 0,
+          "cost": 0,
+          "list": [
+            {
+              "id": 101,
+              "title": "Already Hosting Available",
+              "type": "toggle",
+              "value": false,
+              "hours": 24
+            },
+            {
+              "id": 101,
+              "title": "Need to Buy New Hosting",
+              "type": "toggle",
+              "value": false,
+              "hours": 0,
+              "list": [
+                {
+                  "id": 102,
+                  "depends": 101,
+                  "title": "Hosting Performance and Space",
+                  "type": "slider",
+                  "range": {
+                    "start": 1,
+                    "end": 5,
+                    "stage": 1
+                  },
+                  "value": 1,
+                  "hours": 8,
+                  "cost": 100
+                }
+              ]
+            }
+          ]
+        },
+
+        {
+          "title": "Website Design",
+          "icon": "lni-brush",
+          "hours": 0,
+          "cost": 0,
+          "list": [
+            {
+              "id": 101,
+              "title": "Need to Create New Designs",
+              "type": "toggle",
+              "value": false,
+              "hours": 24,
+              "list": [
+                {
+                  "id": 101,
+                  "title": "Designing Web Pages",
+                  "message": "like www.example.com",
+                  "placeHolder": "Select",
+                  "type": "select",
+                  "value": false,
+                  "hours": 0,
+                  "options": [
+                    {
+                      "title": "Simple",
+                      "value": 6
+                    },
+                    {
+                      "title": "Corporate",
+                      "value": 10
+                    },
+                    {
+                      "title": "Creative",
+                      "value": 16
+                    },
+                    {
+                      "title": "Community",
+                      "value": 12
+                    },
+                    {
+                      "title": "Retail",
+                      "value": 10
+                    },
+                    {
+                      "title": "Events",
+                      "value": 10
+                    }
+                  ]
+                },
+
+                {
+                  "id": 102,
+                  "depends": 101,
+                  "title": "Unique Page Designs",
+                  "message": "Like Home, About us and other pages",
+                  "type": "slider",
+                  "range": {
+                    "start": 1,
+                    "end": 20,
+                    "stage": 1
+                  },
+                  "value": 1,
+                  "hours": 8,
+                  "cost": 100
+                },
+                {
+                  "id": 102,
+                  "depends": 101,
+                  "title": "Design Options for Implementation",
+                  "message": "Number of different layout designs as choise",
+                  "type": "slider",
+                  "range": {
+                    "start": 1,
+                    "end": 3,
+                    "stage": 1
+                  },
+                  "value": 1,
+                  "hours": 8,
+                  "cost": 100
+                }
+              ]
+            },
+
+            {
+              "id": 101,
+              "title": "Templates will be Provided",
+              "type": "toggle",
+              "value": true,
+              "hours": 24
+            }
+          ]
+        },
+        {
+          "title": "Branding",
+          "icon": "lni-flag",
+          "hours": 0,
+          "cost": 0,
+          "list": [
+            {
+              "id": 101,
+              "title": "Need New Logo",
+              "type": "toggle",
+              "value": false,
+              "hours": 24
+            },
+
+            {
+              "id": 102,
+              "depends": 101,
+              "title": "Design Creativity / Complexity Level",
+              "type": "slider",
+              "range": {
+                "start": 1,
+                "end": 3,
+                "stage": 1,
+                "ticking": [
+                  {
+                    "title": "Simple",
+                    "value": 1
+                  },
+                  {
+                    "title": "Medium",
+                    "value": 2
+                  },
+                  {
+                    "title": "Complex",
+                    "value": 3
+                  }
+                ]
+              },
+              "value": 1,
+              "hours": 8,
+              "cost": 100
+            },
+            {
+              "id": 101,
+              "title": "Need Print Works ?",
+              "type": "toggle",
+              "value": false,
+              "hours": 24
+            }
+          ]
+        },
+        {
+          "title": "Content Managment System",
+          "icon": "lni-wordpress",
+          "hours": 0,
+          "cost": 0,
+          "list": [
+            {
+              "id": 101,
+              "title": "Preference on System",
+              "message": "like www.example.com",
+              "placeHolder": "Select",
+              "type": "select",
+              "value": false,
+              "hours": 0,
+              "options": [
+                {
+                  "title": "Wordpress",
+                  "value": 6
+                },
+                {
+                  "title": "Joomla",
+                  "value": 10
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Media and Content",
+          "icon": " lni-gallery",
+          "hours": 0,
+          "cost": 0,
+          "list": [
+            {
+              "id": 101,
+              "title": "Page Written Content with CopyWriting",
+              "message": "like www.example.com",
+              "type": "toggle",
+              "value": false,
+              "hours": 0
+            },
+            {
+              "id": 101,
+              "title": "Need to Buy Stock Images",
+              "type": "toggle",
+              "value": false,
+              "hours": 0
+            }
+          ]
+        },
+
+        {
+          "title": "ECommerce",
+          "icon": "lni-cart",
+          "hours": 0,
+          "cost": 0,
+          "list": [
+            {
+              "id": 101,
+              "title": "Preference on System",
+              "message": "like www.example.com",
+              "placeHolder": "Select",
+              "type": "select",
+              "value": false,
+              "hours": 0,
+              "options": [
+                {
+                  "title": "Wordpress",
+                  "value": 6
+                },
+                {
+                  "title": "Joomla",
+                  "value": 10
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Features in Requirment",
+          "icon": "lightbulb",
+          "hours": 0,
+          "cost": 0,
+          "list": [
+            {
+              "id": 101,
+              "title": "Blog with articles and categories",
+              "type": "toggle",
+              "value": false,
+              "hours": 24
+            },
+            {
+              "id": 101,
+              "title": "News and Press Release",
+              "type": "toggle",
+              "value": false,
+              "hours": 24
+            },
+            {
+              "id": 101,
+              "title": "Events and Events Managment",
+              "type": "toggle",
+              "value": false,
+              "hours": 24
+            },
+            {
+              "id": 101,
+              "title": "Services Managment",
+              "type": "toggle",
+              "value": false,
+              "hours": 24
+            },
+            {
+              "id": 101,
+              "title": "Solution Managment",
+              "type": "toggle",
+              "value": false,
+              "hours": 24
+            },
+            {
+              "id": 101,
+              "title": "Gallery/ Album Managment",
+              "type": "toggle",
+              "value": false,
+              "hours": 24
+            },
+            {
+              "id": 101,
+              "title": "Products Managment",
+              "type": "toggle",
+              "value": false,
+              "hours": 24
+            },
+            {
+              "id": 101,
+              "title": "Team/ Board User List",
+              "type": "toggle",
+              "value": false,
+              "hours": 24
+            },
+            {
+              "id": 101,
+              "title": "Products Comparison",
+              "type": "toggle",
+              "value": false,
+              "hours": 24
+            },
+            {
+              "id": 101,
+              "title": "Donation or Croud Funding",
+              "type": "toggle",
+              "value": false,
+              "hours": 24
+            },
+            {
+              "id": 101,
+              "title": "classified advertisements",
+              "type": "toggle",
+              "value": false,
+              "hours": 24
+            },
+            {
+              "id": 101,
+              "title": "Social Networking ",
+              "type": "toggle",
+              "value": false,
+              "hours": 24
+            },
+            {
+              "id": 101,
+              "title": "Forum",
+              "type": "toggle",
+              "value": false,
+              "hours": 24
+            },
+            {
+              "id": 101,
+              "title": "Gaming",
+              "type": "toggle",
+              "value": false,
+              "hours": 24
+            },
+            {
+              "id": 101,
+              "title": "Wiki or Knowledge Base",
+              "type": "toggle",
+              "value": false,
+              "hours": 24
+            },
+            {
+              "id": 101,
+              "title": "E Learning Video/ Audio",
+              "type": "toggle",
+              "value": false,
+              "hours": 24
+            },
+            {
+              "id": 101,
+              "title": "Testimonal",
+              "type": "toggle",
+              "value": false,
+              "hours": 24
+            }
+          ]
+        },
+        {
+          "title": "User Managment Features",
+          "icon": "lightbulb",
+          "hours": 0,
+          "cost": 0,
+          "list": [
+            {
+              "id": 101,
+              "title": "Login With Credentials",
+              "type": "toggle",
+              "value": false,
+              "hours": 24
+            },
+            {
+              "id": 101,
+              "title": "Login with Social",
+              "type": "toggle",
+              "value": false,
+              "hours": 24
+            },
+            {
+              "id": 101,
+              "title": "Login with AD/SSO/Passport Etc",
+              "type": "toggle",
+              "value": false,
+              "hours": 24
+            },
+            {
+              "id": 101,
+              "title": "User Dashboard",
+              "type": "toggle",
+              "value": false,
+              "hours": 24
+            },
+            {
+              "id": 101,
+              "title": "User Profile",
+              "type": "toggle",
+              "value": false,
+              "hours": 24
+            },
+            {
+              "id": 101,
+              "title": "User Messaging",
+              "type": "toggle",
+              "value": false,
+              "hours": 24
+            },
+            {
+              "id": 101,
+              "title": "User Service/Request Managment",
+              "type": "toggle",
+              "value": false,
+              "hours": 24
+            },
+            {
+              "id": 101,
+              "title": "User Survey Managment",
+              "type": "toggle",
+              "value": false,
+              "hours": 24
+            }
+          ]
+        },
+        {
+          "title": "User Engagement Features",
+          "icon": "lightbulb",
+          "hours": 0,
+          "cost": 0,
+          "list": [
+            {
+              "id": 101,
+              "title": "Search Engine Optimization",
+              "type": "toggle",
+              "value": false,
+              "hours": 24
+            },
+            {
+              "id": 101,
+              "title": "Analytics Integration",
+              "type": "toggle",
+              "value": false,
+              "hours": 24
+            },
+            {
+              "id": 101,
+              "title": "Live Chat",
+              "type": "toggle",
+              "value": false,
+              "hours": 24
+            },
+            {
+              "id": 101,
+              "title": "Quote or Form Filing",
+              "type": "toggle",
+              "value": false,
+              "hours": 24
+            },
+            {
+              "id": 101,
+              "title": "News Letter SignUp",
+              "type": "toggle",
+              "value": false,
+              "hours": 24
+            },
+            {
+              "id": 101,
+              "title": "Contact Information with Map Location",
+              "type": "toggle",
+              "value": false,
+              "hours": 24
+            },
+            {
+              "id": 101,
+              "title": "Links to Social Media and Feeds",
+              "type": "toggle",
+              "value": false,
+              "hours": 24
+            },
+            {
+              "id": 101,
+              "title": "Search within Website Content",
+              "type": "toggle",
+              "value": false,
+              "hours": 24
+            },
+            {
+              "id": 101,
+              "title": "E Mail Services",
+              "type": "toggle",
+              "value": false,
+              "hours": 24
+            },
+            {
+              "id": 101,
+              "title": "Push Notification",
+              "type": "toggle",
+              "value": false,
+              "hours": 24
+            }
+          ]
+        },
+        {
+          "title": "Admin Area Features",
+          "icon": "lightbulb",
+          "hours": 0,
+          "cost": 0,
+          "list": [
+            {
+              "id": 101,
+              "title": "Search Engine Optimization",
+              "type": "toggle",
+              "value": false,
+              "hours": 24
+            },
+            {
+              "id": 101,
+              "title": "Reports & Analytics Integration",
+              "type": "toggle",
+              "value": false,
+              "hours": 24
+            },
+            {
+              "id": 101,
+              "title": "Multi-language Support",
+              "type": "toggle",
+              "value": false,
+              "hours": 24
+            }
+          ]
+        }
+      ]
+    },
+    { "title": "Decide", "pet": "dog" },
+    { "title": "Develop", "pet": "mosquito" },
+    { "title": "Deliver", "pet": "mosquito" }
+  ],
+  "items": [
+    {
+      "id": 1,
+      "title": "Domains Preference",
+      "icon": "lni-domain",
+      "status": false,
+      "hours": 0,
+      "cost": 0,
+      "list": [
+        {
+          "id": 101,
+          "title": "Already Website Available",
+          "message": "like www.example.com",
+          "type": "toggle",
+          "value": false,
+          "hours": 0
+        },
+        {
+          "id": 101,
+          "title": "Need to Buy New Domains",
+          "type": "toggle",
+          "value": false,
+          "hours": 0,
+          "list": [
+            {
+              "id": 102,
+              "depends": 101,
+              "title": "Number of New Domains Required",
+              "message": ".com domain as assumption",
+              "type": "slider",
+              "range": {
+                "start": 1,
+                "end": 10,
+                "stage": 1
+              },
+              "value": 1,
+              "hours": 3,
+              "cost": 10
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Hosting Preference",
+      "icon": "lni-cloud",
+      "hours": 0,
+      "cost": 0,
+      "list": [
+        {
+          "id": 101,
+          "title": "Already Hosting Available",
+          "type": "toggle",
+          "value": false,
+          "hours": 24
+        },
+        {
+          "id": 101,
+          "title": "Need to Buy New Hosting",
+          "type": "toggle",
+          "value": false,
+          "hours": 0,
+          "list": [
+            {
+              "id": 102,
+              "depends": 101,
+              "title": "Hosting Performance and Space",
+              "type": "slider",
+              "range": {
+                "start": 1,
+                "end": 5,
+                "stage": 1
+              },
+              "value": 1,
+              "hours": 8,
+              "cost": 100
+            }
+          ]
+        }
+      ]
+    },
+
+    {
+      "title": "Website Design",
+      "icon": "lni-brush",
+      "hours": 0,
+      "cost": 0,
+      "list": [
+        {
+          "id": 101,
+          "title": "Need to Create New Designs",
+          "type": "toggle",
+          "value": false,
+          "hours": 24,
+          "list": [
+            {
+              "id": 101,
+              "title": "Designing Web Pages",
+              "message": "like www.example.com",
+              "placeHolder": "Select",
+              "type": "select",
+              "value": false,
+              "hours": 0,
+              "options": [
+                {
+                  "title": "Simple",
+                  "value": 6
+                },
+                {
+                  "title": "Corporate",
+                  "value": 10
+                },
+                {
+                  "title": "Creative",
+                  "value": 16
+                },
+                {
+                  "title": "Community",
+                  "value": 12
+                },
+                {
+                  "title": "Retail",
+                  "value": 10
+                },
+                {
+                  "title": "Events",
+                  "value": 10
+                }
+              ]
+            },
+
+            {
+              "id": 102,
+              "depends": 101,
+              "title": "Unique Page Designs",
+              "message": "Like Home, About us and other pages",
+              "type": "slider",
+              "range": {
+                "start": 1,
+                "end": 20,
+                "stage": 1
+              },
+              "value": 1,
+              "hours": 8,
+              "cost": 100
+            },
+            {
+              "id": 102,
+              "depends": 101,
+              "title": "Design Options for Implementation",
+              "message": "Number of different layout designs as choise",
+              "type": "slider",
+              "range": {
+                "start": 1,
+                "end": 3,
+                "stage": 1
+              },
+              "value": 1,
+              "hours": 8,
+              "cost": 100
+            }
+          ]
+        },
+
+        {
+          "id": 101,
+          "title": "Templates will be Provided",
+          "type": "toggle",
+          "value": true,
+          "hours": 24
+        }
+      ]
+    },
+    {
+      "title": "Branding",
+      "icon": "lni-flag",
+      "hours": 0,
+      "cost": 0,
+      "list": [
+        {
+          "id": 101,
+          "title": "Need New Logo",
+          "type": "toggle",
+          "value": false,
+          "hours": 24
+        },
+
+        {
+          "id": 102,
+          "depends": 101,
+          "title": "Design Creativity / Complexity Level",
+          "type": "slider",
+          "range": {
+            "start": 1,
+            "end": 3,
+            "stage": 1,
+            "ticking": [
+              {
+                "title": "Simple",
+                "value": 1
+              },
+              {
+                "title": "Medium",
+                "value": 2
+              },
+              {
+                "title": "Complex",
+                "value": 3
+              }
+            ]
+          },
+          "value": 1,
+          "hours": 8,
+          "cost": 100
+        },
+        {
+          "id": 101,
+          "title": "Need Print Works ?",
+          "type": "toggle",
+          "value": false,
+          "hours": 24
+        }
+      ]
+    },
+    {
+      "title": "Content Managment System",
+      "icon": "lni-wordpress",
+      "hours": 0,
+      "cost": 0,
+      "list": [
+        {
+          "id": 101,
+          "title": "Preference on System",
+          "message": "like www.example.com",
+          "placeHolder": "Select",
+          "type": "select",
+          "value": false,
+          "hours": 0,
+          "options": [
+            {
+              "title": "Wordpress",
+              "value": 6
+            },
+            {
+              "title": "Joomla",
+              "value": 10
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Media and Content",
+      "icon": " lni-gallery",
+      "hours": 0,
+      "cost": 0,
+      "list": [
+        {
+          "id": 101,
+          "title": "Page Written Content with CopyWriting",
+          "message": "like www.example.com",
+          "type": "toggle",
+          "value": false,
+          "hours": 0
+        },
+        {
+          "id": 101,
+          "title": "Need to Buy Stock Images",
+          "type": "toggle",
+          "value": false,
+          "hours": 0
+        }
+      ]
+    },
+
+    {
+      "title": "ECommerce",
+      "icon": "lni-cart",
+      "hours": 0,
+      "cost": 0,
+      "list": [
+        {
+          "id": 101,
+          "title": "Preference on System",
+          "message": "like www.example.com",
+          "placeHolder": "Select",
+          "type": "select",
+          "value": false,
+          "hours": 0,
+          "options": [
+            {
+              "title": "Wordpress",
+              "value": 6
+            },
+            {
+              "title": "Joomla",
+              "value": 10
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Features in Requirment",
+      "icon": "lightbulb",
+      "hours": 0,
+      "cost": 0,
+      "list": [
+        {
+          "id": 101,
+          "title": "Blog with articles and categories",
+          "type": "toggle",
+          "value": false,
+          "hours": 24
+        },
+        {
+          "id": 101,
+          "title": "News and Press Release",
+          "type": "toggle",
+          "value": false,
+          "hours": 24
+        },
+        {
+          "id": 101,
+          "title": "Events and Events Managment",
+          "type": "toggle",
+          "value": false,
+          "hours": 24
+        },
+        {
+          "id": 101,
+          "title": "Services Managment",
+          "type": "toggle",
+          "value": false,
+          "hours": 24
+        },
+        {
+          "id": 101,
+          "title": "Solution Managment",
+          "type": "toggle",
+          "value": false,
+          "hours": 24
+        },
+        {
+          "id": 101,
+          "title": "Gallery/ Album Managment",
+          "type": "toggle",
+          "value": false,
+          "hours": 24
+        },
+        {
+          "id": 101,
+          "title": "Products Managment",
+          "type": "toggle",
+          "value": false,
+          "hours": 24
+        },
+        {
+          "id": 101,
+          "title": "Team/ Board User List",
+          "type": "toggle",
+          "value": false,
+          "hours": 24
+        },
+        {
+          "id": 101,
+          "title": "Products Comparison",
+          "type": "toggle",
+          "value": false,
+          "hours": 24
+        },
+        {
+          "id": 101,
+          "title": "Donation or Croud Funding",
+          "type": "toggle",
+          "value": false,
+          "hours": 24
+        },
+        {
+          "id": 101,
+          "title": "classified advertisements",
+          "type": "toggle",
+          "value": false,
+          "hours": 24
+        },
+        {
+          "id": 101,
+          "title": "Social Networking ",
+          "type": "toggle",
+          "value": false,
+          "hours": 24
+        },
+        {
+          "id": 101,
+          "title": "Forum",
+          "type": "toggle",
+          "value": false,
+          "hours": 24
+        },
+        {
+          "id": 101,
+          "title": "Gaming",
+          "type": "toggle",
+          "value": false,
+          "hours": 24
+        },
+        {
+          "id": 101,
+          "title": "Wiki or Knowledge Base",
+          "type": "toggle",
+          "value": false,
+          "hours": 24
+        },
+        {
+          "id": 101,
+          "title": "E Learning Video/ Audio",
+          "type": "toggle",
+          "value": false,
+          "hours": 24
+        },
+        {
+          "id": 101,
+          "title": "Testimonal",
+          "type": "toggle",
+          "value": false,
+          "hours": 24
+        }
+      ]
+    },
+    {
+      "title": "User Managment Features",
+      "icon": "lightbulb",
+      "hours": 0,
+      "cost": 0,
+      "list": [
+        {
+          "id": 101,
+          "title": "Login With Credentials",
+          "type": "toggle",
+          "value": false,
+          "hours": 24
+        },
+        {
+          "id": 101,
+          "title": "Login with Social",
+          "type": "toggle",
+          "value": false,
+          "hours": 24
+        },
+        {
+          "id": 101,
+          "title": "Login with AD/SSO/Passport Etc",
+          "type": "toggle",
+          "value": false,
+          "hours": 24
+        },
+        {
+          "id": 101,
+          "title": "User Dashboard",
+          "type": "toggle",
+          "value": false,
+          "hours": 24
+        },
+        {
+          "id": 101,
+          "title": "User Profile",
+          "type": "toggle",
+          "value": false,
+          "hours": 24
+        },
+        {
+          "id": 101,
+          "title": "User Messaging",
+          "type": "toggle",
+          "value": false,
+          "hours": 24
+        },
+        {
+          "id": 101,
+          "title": "User Service/Request Managment",
+          "type": "toggle",
+          "value": false,
+          "hours": 24
+        },
+        {
+          "id": 101,
+          "title": "User Survey Managment",
+          "type": "toggle",
+          "value": false,
+          "hours": 24
+        }
+      ]
+    },
+    {
+      "title": "User Engagement Features",
+      "icon": "lightbulb",
+      "hours": 0,
+      "cost": 0,
+      "list": [
+        {
+          "id": 101,
+          "title": "Search Engine Optimization",
+          "type": "toggle",
+          "value": false,
+          "hours": 24
+        },
+        {
+          "id": 101,
+          "title": "Analytics Integration",
+          "type": "toggle",
+          "value": false,
+          "hours": 24
+        },
+        {
+          "id": 101,
+          "title": "Live Chat",
+          "type": "toggle",
+          "value": false,
+          "hours": 24
+        },
+        {
+          "id": 101,
+          "title": "Quote or Form Filing",
+          "type": "toggle",
+          "value": false,
+          "hours": 24
+        },
+        {
+          "id": 101,
+          "title": "News Letter SignUp",
+          "type": "toggle",
+          "value": false,
+          "hours": 24
+        },
+        {
+          "id": 101,
+          "title": "Contact Information with Map Location",
+          "type": "toggle",
+          "value": false,
+          "hours": 24
+        },
+        {
+          "id": 101,
+          "title": "Links to Social Media and Feeds",
+          "type": "toggle",
+          "value": false,
+          "hours": 24
+        },
+        {
+          "id": 101,
+          "title": "Search within Website Content",
+          "type": "toggle",
+          "value": false,
+          "hours": 24
+        },
+        {
+          "id": 101,
+          "title": "E Mail Services",
+          "type": "toggle",
+          "value": false,
+          "hours": 24
+        },
+        {
+          "id": 101,
+          "title": "Push Notification",
+          "type": "toggle",
+          "value": false,
+          "hours": 24
+        }
+      ]
+    },
+    {
+      "title": "Admin Area Features",
+      "icon": "lightbulb",
+      "hours": 0,
+      "cost": 0,
+      "list": [
+        {
+          "id": 101,
+          "title": "Search Engine Optimization",
+          "type": "toggle",
+          "value": false,
+          "hours": 24
+        },
+        {
+          "id": 101,
+          "title": "Reports & Analytics Integration",
+          "type": "toggle",
+          "value": false,
+          "hours": 24
+        },
+        {
+          "id": 101,
+          "title": "Multi-language Support",
+          "type": "toggle",
+          "value": false,
+          "hours": 24
+        }
+      ]
+    }
+  ]
+}
